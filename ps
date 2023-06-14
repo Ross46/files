@@ -1,0 +1,4 @@
+$uri = "http://myserver/service"
+$wc = New-Object System.Net.WebClient
+$wc.UseDefaultCredentials = $true
+$json = $wc.DownloadString($uri)
